@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<title>The Lecture Clicker</title>
+	<script>
+		function validateForm() 
+		{
+			var a = document.forms["login"]["Tname"].value;
+			var b = document.forms["login"]["password"].value;
+
+			if (a==null || a=="") {
+				alert("Email address must be filled out!");
+				return false;}
+			else if (b==null || b=="") {
+				alert("Password must be filled out!");
+				return false;}
+			else{
+				return true;}
+		}
+	</script>
+	<link rel="icon" href="weltec-icon.png" type="img/png"/>
+</head>
+
+<body>
+	<div class="logo" align="center"><br><br><br>
+		<img src="weltec-logo-vertical.png" height="150" width="100"><br><img src="divider.png" alt="" width="160px" class="pull-right">
+	</div>
+	<div class="log-in" align="center">
+		<form name="login" method="post" action="login.php" onsubmit="return validateForm()">
+			Username:&nbsp;&nbsp;
+			<input type="text" name="Tname" size="20"><br><br>
+			Password : &nbsp;
+			<input type="password" name="password" maxlength="12" size="20"><br><br>
+			<input type="submit" value="Log In"><br><br>
+		</form>
+	</div>
+	<footer><h6 align="center">© 2015 Lecture Clicker. All Rights Reserved.</h6></footer>
+</body>
+</html>
